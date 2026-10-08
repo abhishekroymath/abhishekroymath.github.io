@@ -1,0 +1,15 @@
+body{
+    font-family: Arial;
+    max-width:900px;
+    margin:auto;
+    padding:40px;
+    line-height:1.7;
+}
+
+h1{
+    color:#003366;
+}
+
+a{
+    color:#0066cc;
+}
