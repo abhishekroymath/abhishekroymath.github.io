@@ -1,15 +1,26 @@
-body{
+body {
     font-family: Arial;
-    max-width:900px;
-    margin:auto;
-    padding:40px;
-    line-height:1.7;
+    max-width: 1000px;
+    margin: auto;
+    padding: 30px;
+    line-height: 1.7;
 }
 
-h1{
-    color:#003366;
+nav {
+    margin-bottom: 20px;
 }
 
-a{
-    color:#0066cc;
+nav a {
+    text-decoration: none;
+    color: #003366;
+    font-weight: bold;
+    margin-right: 20px;
+}
+
+nav a:hover {
+    color: #0077cc;
+}
+
+h1 {
+    color: #003366;
 }
