@@ -1,37 +1,38 @@
-/* ================================
+/* =========================================
    General
-   ================================ */
+   ========================================= */
 
 * {
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
-    color: #333;
-    background-color: #ffffff;
+    color: #333333;
+    background: #ffffff;
     line-height: 1.7;
 }
 
-/* Main content width */
 
-body > * {
-    max-width: 1000px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-/* ================================
-   Navigation
-   ================================ */
+/* =========================================
+   Navigation Bar
+   ========================================= */
 
 nav {
-    max-width: 1000px;
+    width: 100%;
+    max-width: 1100px;
     margin: 0 auto;
-    padding: 20px 25px;
+
+    padding: 20px 30px;
 
     display: flex;
+    justify-content: flex-end;
+    align-items: center;
     flex-wrap: wrap;
     gap: 25px;
 
@@ -41,47 +42,186 @@ nav {
 nav a {
     color: #17365d;
     text-decoration: none;
+
     font-size: 15px;
     font-weight: 600;
+
+    transition: color 0.2s ease;
 }
 
 nav a:hover {
     color: #0077b6;
 }
 
-/* ================================
-   Main content
-   ================================ */
+
+/* =========================================
+   Main Content
+   ========================================= */
+
+main {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+
+    padding: 0 30px 50px;
+}
 
 h1 {
     color: #17365d;
-    font-size: 36px;
-    margin-top: 45px;
-    margin-bottom: 20px;
+
+    font-size: 42px;
+    line-height: 1.2;
+
+    margin-top: 0;
+    margin-bottom: 15px;
 }
 
 h2 {
-    color: #234f7d;
-    font-size: 25px;
-    margin-top: 35px;
+    color: #17365d;
+
+    font-size: 28px;
+
+    margin-top: 55px;
+    margin-bottom: 25px;
+
+    border-bottom: 2px solid #e8edf2;
+    padding-bottom: 8px;
 }
 
 h3 {
-    color: #333;
+    color: #234f7d;
 }
 
 p {
     font-size: 16px;
 }
 
-ul,
-ol {
-    padding-left: 25px;
+
+/* =========================================
+   Homepage Hero Section
+   ========================================= */
+
+.home {
+    min-height: 500px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 70px;
+
+    padding: 75px 20px 60px;
 }
 
-/* ================================
-   Links
-   ================================ */
+.home-text {
+    flex: 1;
+}
+
+.home-text h1 {
+    margin-bottom: 5px;
+}
+
+.position {
+    font-size: 22px;
+
+    color: #555555;
+
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.institution {
+    font-size: 17px;
+
+    color: #666666;
+
+    margin-top: 5px;
+    margin-bottom: 25px;
+}
+
+.home-text p {
+    max-width: 680px;
+}
+
+
+/* =========================================
+   Profile Photo
+   ========================================= */
+
+.home-photo {
+    width: 230px;
+    height: 230px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 5px solid #f0f2f5;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================================
+   Buttons
+   ========================================= */
+
+.button {
+    display: inline-block;
+
+    margin-top: 20px;
+    margin-right: 10px;
+
+    padding: 10px 22px;
+
+    background: #17365d;
+    color: #ffffff;
+
+    text-decoration: none;
+
+    border-radius: 5px;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    transition: background 0.2s ease;
+}
+
+.button:hover {
+    background: #234f7d;
+
+    color: #ffffff;
+}
+
+
+/* =========================================
+   Research Cards
+   ========================================= */
+
+.research-card {
+    background: #f7f9fb;
+
+    margin: 20px 0;
+
+    padding: 20px 25px;
+
+    border-left: 4px solid #17365d;
+
+    border-radius: 0 5px 5px 0;
+}
+
+.research-card h3 {
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+
+.research-card p {
+    margin-bottom: 0;
+}
+
+
+/* =========================================
+   General Links
+   ========================================= */
 
 a {
     color: #0066cc;
@@ -91,79 +231,14 @@ a:hover {
     color: #004080;
 }
 
-/* ================================
-   Homepage
-   ================================ */
 
-.home {
-    display: flex;
-    align-items: center;
-    gap: 50px;
-
-    padding: 70px 25px;
-}
-
-.home-text {
-    flex: 1;
-}
-
-.home-photo {
-    width: 220px;
-    height: 220px;
-    object-fit: cover;
-
-    border-radius: 50%;
-    border: 4px solid #eeeeee;
-}
-
-.home h1 {
-    margin-top: 0;
-    font-size: 42px;
-}
-
-.position {
-    font-size: 20px;
-    color: #555;
-}
-
-.institution {
-    font-size: 17px;
-    color: #666;
-}
-
-/* ================================
-   Buttons
-   ================================ */
-
-.button {
-    display: inline-block;
-
-    margin-top: 15px;
-    margin-right: 10px;
-
-    padding: 10px 20px;
-
-    background-color: #17365d;
-    color: white;
-
-    text-decoration: none;
-
-    border-radius: 5px;
-
-    font-weight: 600;
-}
-
-.button:hover {
-    background-color: #234f7d;
-    color: white;
-}
-
-/* ================================
+/* =========================================
    Publications
-   ================================ */
+   ========================================= */
 
 .publication {
-    margin-bottom: 25px;
+    margin-bottom: 30px;
+
     padding-bottom: 20px;
 
     border-bottom: 1px solid #eeeeee;
@@ -171,97 +246,91 @@ a:hover {
 
 .publication-title {
     font-weight: 600;
+
     color: #17365d;
 }
 
 .publication-journal {
     font-style: italic;
-    color: #555;
+
+    color: #555555;
 }
 
-/* ================================
-   Research cards
-   ================================ */
 
-.research-card {
-    padding: 20px;
-    margin: 20px 0;
-
-    background-color: #f7f9fb;
-
-    border-left: 4px solid #17365d;
-}
-
-.research-card h3 {
-    margin-top: 0;
-    color: #17365d;
-}
-
-/* ================================
-   CV download
-   ================================ */
+/* =========================================
+   CV
+   ========================================= */
 
 .cv-download {
     display: inline-block;
 
     margin-top: 20px;
+
     padding: 12px 25px;
 
-    background-color: #17365d;
-    color: white;
+    background: #17365d;
+    color: #ffffff;
 
     text-decoration: none;
 
     border-radius: 5px;
 
-    font-weight: bold;
+    font-weight: 600;
 }
 
 .cv-download:hover {
-    background-color: #234f7d;
-    color: white;
+    background: #234f7d;
+
+    color: #ffffff;
 }
 
-/* ================================
+
+/* =========================================
    Contact
-   ================================ */
+   ========================================= */
 
 .contact-item {
-    margin: 15px 0;
+    margin: 18px 0;
 }
 
 .contact-item strong {
     color: #17365d;
 }
 
-/* ================================
+
+/* =========================================
    Footer
-   ================================ */
+   ========================================= */
 
 footer {
-    max-width: 1000px;
-    margin: 60px auto 0;
+    width: 100%;
+
+    margin-top: 50px;
 
     padding: 25px;
 
     text-align: center;
 
-    color: #777;
-
-    border-top: 1px solid #eeeeee;
+    color: #777777;
 
     font-size: 14px;
+
+    border-top: 1px solid #eeeeee;
 }
 
-/* ================================
-   Mobile
-   ================================ */
 
-@media (max-width: 700px) {
+/* =========================================
+   Mobile / Tablet
+   ========================================= */
+
+@media (max-width: 750px) {
 
     nav {
+        justify-content: center;
+
+        padding: 15px 20px;
+
         gap: 15px;
-        padding: 15px;
     }
 
     nav a {
@@ -270,26 +339,79 @@ footer {
 
     .home {
         flex-direction: column-reverse;
+
         text-align: center;
 
-        padding: 45px 20px;
+        gap: 30px;
+
+        padding: 50px 10px;
     }
 
     .home-photo {
-        width: 170px;
-        height: 170px;
+        width: 180px;
+        height: 180px;
     }
 
-    .home h1 {
+    h1 {
         font-size: 34px;
+    }
+
+    h2 {
+        font-size: 25px;
+    }
+
+    .position {
+        font-size: 20px;
+    }
+
+    .institution {
+        font-size: 16px;
+    }
+
+    .home-text p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    main {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+
+/* =========================================
+   Very Small Screens
+   ========================================= */
+
+@media (max-width: 450px) {
+
+    nav {
+        gap: 10px;
+    }
+
+    nav a {
+        font-size: 13px;
+    }
+
+    .home {
+        padding-top: 35px;
+    }
+
+    .home-photo {
+        width: 150px;
+        height: 150px;
     }
 
     h1 {
         font-size: 30px;
     }
 
-    body > * {
-        padding-left: 20px;
-        padding-right: 20px;
+    .button {
+        display: block;
+
+        margin: 10px auto;
+
+        max-width: 220px;
     }
 }
